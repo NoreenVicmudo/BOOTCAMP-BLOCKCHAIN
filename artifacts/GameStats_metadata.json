@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createPlayer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "playerStats",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "score",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "levelProgress",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isAlive",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newScore",
+						"type": "uint256"
+					}
+				],
+				"name": "updateScore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Activity_Day3.sol": "GameStats"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Activity_Day3.sol": {
+			"keccak256": "0x6e13e8611466081e41506cbd8f971bac5642cc8e7d15180d7ed8cac8cc03da92",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7ee3d683bb6f7da66735ce7af103b638293a2e7e56a5f703a8cf444d8b7ac60a",
+				"dweb:/ipfs/QmePRq1XXrsgqdKhy5RZa3EpWvdXCuMm1oNT8H38JK1igQ"
+			]
+		}
+	},
+	"version": 1
+}
