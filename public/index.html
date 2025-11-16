@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blockchain Simulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .header-icon {
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .blocks-container {
+            margin-bottom: 30px;
+        }
+
+        .block {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+
+        .block-header {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .block-field {
+            margin-bottom: 10px;
+        }
+
+        .block-label {
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .block-value {
+            color: #333;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+
+        .add-block-section {
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+        .add-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .add-button:hover {
+            background-color: #357abd;
+        }
+
+        .add-button:active {
+            transform: scale(0.98);
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #999;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">🧱</div>
+            <h1>Simple Blockchain Simulator</h1>
+        </div>
+
+        <div class="blocks-container" id="blocksContainer">
+            <div class="empty-state">No blocks yet. Add your first block!</div>
+        </div>
+
+        <div class="add-block-section">
+            <div class="input-group">
+                <label for="blockData">Block Data:</label>
+                <input type="text" id="blockData" placeholder="Enter block data..." />
+            </div>
+            <button class="add-button" onclick="addBlock()">Add Block</button>
+        </div>
+    </div>
+
+    <script>
+        // API base URL - use localhost when served by Express
+        const API_BASE = window.location.protocol === 'file:' 
+            ? 'http://localhost:3000' 
+            : '';
+
+        // Load blocks on page load
+        async function loadBlocks() {
+            try {
+                const response = await fetch(`${API_BASE}/api/blocks`);
+                const blocks = await response.json();
+                displayBlocks(blocks);
+            } catch (error) {
+                console.error('Error loading blocks:', error);
+                if (window.location.protocol === 'file:') {
+                    document.getElementById('blocksContainer').innerHTML = 
+                        '<div class="empty-state" style="color: #d32f2f;">⚠️ Please access this page through the server at <a href="http://localhost:3000" style="color: #4a90e2;">http://localhost:3000</a></div>';
+                }
+            }
+        }
+
+        // Display blocks
+        function displayBlocks(blocks) {
+            const container = document.getElementById('blocksContainer');
+            
+            if (blocks.length === 0) {
+                container.innerHTML = '<div class="empty-state">No blocks yet. Add your first block!</div>';
+                return;
+            }
+
+            container.innerHTML = blocks.map(block => `
+                <div class="block">
+                    <div class="block-header">Block #${block.id}</div>
+                    <div class="block-field">
+                        <span class="block-label">Data:</span>
+                        <span class="block-value">${block.data}</span>
+                    </div>
+                    <div class="block-field">
+                        <span class="block-label">Previous Hash:</span>
+                        <span class="block-value">${block.previousHash}</span>
+                    </div>
+                    <div class="block-field">
+                        <span class="block-label">Hash:</span>
+                        <span class="block-value">${block.hash}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Add new block
+        async function addBlock() {
+            const dataInput = document.getElementById('blockData');
+            const data = dataInput.value.trim();
+
+            if (!data) {
+                alert('Please enter block data');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/api/addBlock`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ data })
+                });
+
+                if (response.ok) {
+                    const newBlock = await response.json();
+                    dataInput.value = '';
+                    loadBlocks(); // Reload all blocks
+                } else {
+                    const error = await response.json();
+                    alert(error.error || 'Failed to add block');
+                }
+            } catch (error) {
+                console.error('Error adding block:', error);
+                alert('Error adding block. Please try again.');
+            }
+        }
+
+        // Allow Enter key to add block
+        document.getElementById('blockData').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addBlock();
+            }
+        });
+
+        // Load blocks when page loads
+        loadBlocks();
+    </script>
+</body>
+</html>
+
