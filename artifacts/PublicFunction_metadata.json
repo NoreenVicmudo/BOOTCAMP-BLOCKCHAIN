@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "greet",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "otherFunction",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PublicFunction.sol": "PublicFunction"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PublicFunction.sol": {
+			"keccak256": "0xb8f3f0473ec3f9e9b12d23f838c9310805456133026da1477032f83574bd9887",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bae9db64b934bae49b364d7288a0ffa078cc18e0236775de7f636a4459eca76d",
+				"dweb:/ipfs/QmfTxJy4N6wAdFC4uiZpqzatdB1gcVJoBuf43TYdDdiE4d"
+			]
+		}
+	},
+	"version": 1
+}

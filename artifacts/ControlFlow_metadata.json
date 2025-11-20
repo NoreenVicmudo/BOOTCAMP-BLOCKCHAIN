@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "purchases",
+						"type": "uint256"
+					}
+				],
+				"name": "rewardPoints",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "points",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ControlFlow.sol": "ControlFlow"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ControlFlow.sol": {
+			"keccak256": "0x8f1e7d6c86a336b10a5d71cff751dd53d78603e028846e64f346ef3d2d5a4666",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8838944a8f70a4e56b08258dcc3d58fbe5458d88cead35eea825d74284ea9d23",
+				"dweb:/ipfs/QmPrPy9ERUC1G89pDJ5PRk1QQE8NtbqGMNhEgfWcKw9zzu"
+			]
+		}
+	},
+	"version": 1
+}

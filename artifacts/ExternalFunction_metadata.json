@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "helloFunction",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExternalFunction.sol": "ExternalFunction"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExternalFunction.sol": {
+			"keccak256": "0xa3e1d87dc0f1ff30be655d985a2f760ce1fdcedf444765416c73bd348b0f0c86",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://66049410d9f8b78a2a44ae3d528480435930a3cd6f157e97b26c869108d707f3",
+				"dweb:/ipfs/QmX7X4e7FiHxdvKSNHcdqLMnCCqrFKLhrL2BMCZUXKUiNc"
+			]
+		}
+	},
+	"version": 1
+}

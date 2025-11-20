@@ -1,0 +1,132 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "fnum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "snum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tnum",
+						"type": "uint256"
+					}
+				],
+				"name": "computeAverage",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "eth",
+						"type": "uint256"
+					}
+				],
+				"name": "convertETH",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "celsius",
+						"type": "uint256"
+					}
+				],
+				"name": "convertTemperature",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "hour",
+						"type": "uint256"
+					}
+				],
+				"name": "convertTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Activity_Day4.sol": "Activity_Day4"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Activity_Day4.sol": {
+			"keccak256": "0x11371f35651c55abd074c1a9ed6f14b0db2fdb0333213a95130189afa47398f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e9931ebb663128886cc6d1adbe23382a65a42d2cee024a848b5329cc5d656f94",
+				"dweb:/ipfs/Qmcntq9k2voMTVvuDe5fon8kctK6Y4LNx8saePASraia65"
+			]
+		}
+	},
+	"version": 1
+}

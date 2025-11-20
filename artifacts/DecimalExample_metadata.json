@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "cons",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "celsius",
+						"type": "uint256"
+					}
+				],
+				"name": "convertTemperature",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "fahrenheit",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Activity_Day4.sol": "DecimalExample"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Activity_Day4.sol": {
+			"keccak256": "0x1b3418053e3bf78f15a7dea5c402fabfa3b38c69b86f84b0282e205e0e726d25",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://acada5499da81fa39936fa77a95b5c41d86686917d96db1e531a973d36cacfb5",
+				"dweb:/ipfs/QmQRm2o5PUTSVr5qmvGKqDTWNLLWP22yaChFdr6pe7K9a4"
+			]
+		}
+	},
+	"version": 1
+}
