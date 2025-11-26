@@ -65,30 +65,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "students",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "age",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -104,7 +80,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Activity2_Day9.sol": "StudentRegistry"
+			"contracts/Activity2_Day9.sol": "IStudentRegistry"
 		},
 		"evmVersion": "prague",
 		"libraries": {},

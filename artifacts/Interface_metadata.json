@@ -6,8 +6,32 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "number",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "callSetNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "readNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -16,19 +40,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "num",
-						"type": "uint256"
-					}
-				],
-				"name": "setNumber",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -45,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FirstContract.sol": "FirstContract"
+			"contracts/ContractCaller.sol": "Interface"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -59,12 +70,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FirstContract.sol": {
-			"keccak256": "0xcb861f89d001f84c582f54f2186c02eaaa6d0d47ba80f45aef49764bf547ef12",
+		"contracts/ContractCaller.sol": {
+			"keccak256": "0x7b3240c31be774011538f19d14f098a09bda32d1f04af5d8693311bccef0a2f8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://058a0b331e7c1b3e8df170393b9738e35892a61b3b9095f2c0e67daa805fb77e",
-				"dweb:/ipfs/QmbiUJTVgFRiTYzRC6ZvmnUSStXRHg4kagVQ3eiXzLTuto"
+				"bzz-raw://ba75e9c11bc2c2d9feaacd0d208961099b9ab9c986bd1dc6183aee247b4d4f8e",
+				"dweb:/ipfs/QmeAk8Rz6und6MY6c3mpARMfsp2i27otc9RTGj3i9GXziP"
 			]
 		}
 	},

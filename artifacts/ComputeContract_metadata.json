@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "fnum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "snum",
+						"type": "uint256"
+					}
+				],
+				"name": "compute",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "sum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "diff",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "prod",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quo",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Activity1_Day9.sol": "ComputeContract"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Activity1_Day9.sol": {
+			"keccak256": "0x07069c371c53c31c27f93040d40c2644bdadcd5a9cbc2b1f43a660dea943eece",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8b358cea0cc13b6c9caebd903c7390ebd2bfdb2448a9b498c7b7a59d32477088",
+				"dweb:/ipfs/QmQzW9wBVXEqyNMoh6GWiJBGt9fLAw1ap3zLY7gm1J33Ze"
+			]
+		}
+	},
+	"version": 1
+}

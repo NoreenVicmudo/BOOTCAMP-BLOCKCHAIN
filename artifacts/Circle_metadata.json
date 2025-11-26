@@ -7,28 +7,15 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "number",
+				"name": "area",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "num",
-						"type": "uint256"
-					}
-				],
-				"name": "setNumber",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -45,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FirstContract.sol": "FirstContract"
+			"contracts/MultipleAccess.sol": "Circle"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -59,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FirstContract.sol": {
-			"keccak256": "0xcb861f89d001f84c582f54f2186c02eaaa6d0d47ba80f45aef49764bf547ef12",
+		"contracts/MultipleAccess.sol": {
+			"keccak256": "0x6a79d208c053392b7c7274be74975f425aa518c8bf507e1878dfb58ab6d4b1ea",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://058a0b331e7c1b3e8df170393b9738e35892a61b3b9095f2c0e67daa805fb77e",
-				"dweb:/ipfs/QmbiUJTVgFRiTYzRC6ZvmnUSStXRHg4kagVQ3eiXzLTuto"
+				"bzz-raw://15f8b9d3278517f4215b13aac413c514fc8c535989fd700141bccaf36c1e0eab",
+				"dweb:/ipfs/QmQexS4rSNvvMTiGkJzayy1eJF7tdfBZfe6F9eoYF1YFmg"
 			]
 		}
 	},

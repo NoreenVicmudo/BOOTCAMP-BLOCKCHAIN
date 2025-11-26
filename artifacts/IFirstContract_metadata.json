@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FirstContract.sol": "FirstContract"
+			"contracts/Interface.sol": "IFirstContract"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FirstContract.sol": {
-			"keccak256": "0xcb861f89d001f84c582f54f2186c02eaaa6d0d47ba80f45aef49764bf547ef12",
+		"contracts/Interface.sol": {
+			"keccak256": "0x9ddd5f3fd0f6bb16016945e4839f4fddb1eb9a7ebe3e74c263d19463b8265755",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://058a0b331e7c1b3e8df170393b9738e35892a61b3b9095f2c0e67daa805fb77e",
-				"dweb:/ipfs/QmbiUJTVgFRiTYzRC6ZvmnUSStXRHg4kagVQ3eiXzLTuto"
+				"bzz-raw://6b5f6bddf66242ca2168f9140c513ac70fa6caae942ad73ff86bfe824a68d998",
+				"dweb:/ipfs/QmUzjcv5ioECj32Cs3aNVjECpWqMYbgjzFaMThF8L3Yo78"
 			]
 		}
 	},

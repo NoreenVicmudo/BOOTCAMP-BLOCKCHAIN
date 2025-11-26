@@ -6,8 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "number",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "getSquare",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -15,20 +21,31 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "num",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "y",
 						"type": "uint256"
 					}
 				],
-				"name": "setNumber",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "getSum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -45,7 +62,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FirstContract.sol": "FirstContract"
+			"contracts/Calculator.sol": "Calculator"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -59,12 +76,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FirstContract.sol": {
-			"keccak256": "0xcb861f89d001f84c582f54f2186c02eaaa6d0d47ba80f45aef49764bf547ef12",
+		"contracts/Calculator.sol": {
+			"keccak256": "0x13fc7f13a2600994ee92e8e0a9cfcd7d02494476be107fe69fafb2f316ca994d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://058a0b331e7c1b3e8df170393b9738e35892a61b3b9095f2c0e67daa805fb77e",
-				"dweb:/ipfs/QmbiUJTVgFRiTYzRC6ZvmnUSStXRHg4kagVQ3eiXzLTuto"
+				"bzz-raw://3b0dedcde4aa124f3e25c44aad76b778639e41248d5f5b9d32c23953b385a42c",
+				"dweb:/ipfs/QmVVfCf7eNFwurgFiUet4bw7pKbu3iCboPrCfvomQFrD43"
 			]
 		}
 	},

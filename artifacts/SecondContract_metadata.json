@@ -6,8 +6,32 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "number",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "callSetNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "readNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -16,19 +40,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "num",
-						"type": "uint256"
-					}
-				],
-				"name": "setNumber",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -45,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FirstContract.sol": "FirstContract"
+			"contracts/SecondContract.sol": "SecondContract"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -59,12 +70,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FirstContract.sol": {
-			"keccak256": "0xcb861f89d001f84c582f54f2186c02eaaa6d0d47ba80f45aef49764bf547ef12",
+		"contracts/SecondContract.sol": {
+			"keccak256": "0xa7ef952408ba89a4369d081eedcd37cc59bdea152c6f32a0f26fd48731875893",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://058a0b331e7c1b3e8df170393b9738e35892a61b3b9095f2c0e67daa805fb77e",
-				"dweb:/ipfs/QmbiUJTVgFRiTYzRC6ZvmnUSStXRHg4kagVQ3eiXzLTuto"
+				"bzz-raw://0caacc9149ca5853b7082d929c0c2433df967fa2b7c16888ecf00c394ddfc146",
+				"dweb:/ipfs/QmRxj2bBsphmDgtcpKUNZHZYpqzYVM3aRbtxA8ysN1NBZv"
 			]
 		}
 	},
