@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Upload the poster</h2>
+
+    <input type="file" id="fileInput" />
+    <button onclick="uploadFile()">Upload to IPFS via Pinata</button>
+
+    <p id="status"></p>
+
+    <script type="application/javascript">
+      const PINATA_JWT =
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiI2MjY0NzYxZi0xOTg0LTQ3MTEtOWM4Ni1mMDRlYTY1MDAyNWIiLCJlbWFpbCI6InZpY211ZG9ub3JlZW4xMjBAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiRlJBMSJ9LHsiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjEsImlkIjoiTllDMSJ9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6Ijc3N2FhMWI2Y2M3NDUxYWI1OTY0Iiwic2NvcGVkS2V5U2VjcmV0IjoiYmIyZjk3ZjlmM2Y3OTFkNTE1YTNmYzI1ZmM5YzJhODMzZmUxODJhZTg2ZGQ3ZjI2MTg2MzkxYWQxOTRlODM2ZiIsImV4cCI6MTc5NTY5NjcyN30.pV1KxkM1Qdo_LWWg5qK2KKrC-oba0nuW7kruHJrUwkI";
+
+      async function uploadFile() {
+        const fileInput = document.getElementById("fileInput");
+        if (!fileInput.files.length) {
+          alert("Please select a file to upload.");
+          return;
+        }
+
+        const file = fileInput.files[0];
+        let data = new FormData();
+        data.append("file", file);
+
+        let res = await fetch(
+          "https://api.pinata.cloud/pinning/pinFileToIPFS",
+          {
+            method: "POST",
+            body: data,
+            headers: {
+              Authorization: PINATA_JWT,
+            },
+          }
+        );
+
+        let fileResult = await res.json();
+        const imageCID = `https://ipfs.io/ipfs/${fileResult.IpfsHash}`;
+        /*
+        document.getElementById(
+          "status"
+        ).innerText = `File uploaded! Access it at: ${imageCID}`;*/
+
+        const metadata = {
+          name: "Cyrene Poster",
+          date: 2025,
+          artist: "Hoyo",
+          genre: "Sci-fi",
+          image: imageCID,
+        };
+
+        let res2 = await fetch(
+          "https://api.pinata.cloud/pinning/pinJSONToIPFS",
+          {
+            method: "POST",
+            body: JSON.stringify(metadata),
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: PINATA_JWT,
+            },
+          }
+        );
+
+        let fileResult2 = await res2.json();
+        document.getElementById(
+          "status"
+        ).innerText = `https://ipfs.io/ipfs/${fileResult2.IpfsHash}`;
+      }
+    </script>
+  </body>
+</html>
